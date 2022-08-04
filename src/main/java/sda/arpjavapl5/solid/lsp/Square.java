@@ -3,8 +3,7 @@ package sda.arpjavapl5.solid.lsp;
 public class Square extends Rectangle{
 
     public Square(double side) {
-        height = side;
-        width = side;
+        super(side, side);
     }
 
     @Override

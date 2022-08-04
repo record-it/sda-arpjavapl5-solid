@@ -2,15 +2,14 @@ package sda.arpjavapl5.solid.lsp;
 
 public class RectangleAndSquareDemo {
     public static void main(String[] args) {
-        Rectangle square = new Square(5);
-        Rectangle rectangle = new Rectangle();
-        rectangle.setWidth(5);
-        rectangle.setHeight(5);
-
+        Rectangle square = new BorderedRectangle(4, 4, 5);
         square.setHeight(7);
         square.setWidth(4);
-        System.out.println("Wysokość kwadratu: " + square.getHeight());
-        System.out.println("Szerokość kwadratu: " + square.getWidth());
+        if (square.getWidth() == 4 && square.getHeight()==7){
+            System.out.println("Poprawny substytut.");
+        } else {
+            System.out.println("Niepoprawny substytut!");
+        }
 
     }
 }

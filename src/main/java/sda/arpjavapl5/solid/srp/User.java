@@ -1,5 +1,6 @@
 package sda.arpjavapl5.solid.srp;
 
+import sda.arpjavapl5.solid.dip.Printer;
 import sda.arpjavapl5.solid.formatter.NameFormatter;
 
 import java.util.function.Function;
@@ -49,5 +50,10 @@ public class User {
     //narusza zasady SRP, zajmuje się szczegółami budowy email'a
     public String emailDomain(){
         return email.split("@")[1];
+    }
+
+    public void printUserReport(Printer printer){
+        printer.configure(300);
+        printer.print(firstName + lastName + "\\n");
     }
 }
